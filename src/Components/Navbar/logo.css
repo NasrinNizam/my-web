@@ -1,0 +1,53 @@
+.animation{
+    /* width: 800px;
+    height: 300px; */
+    background: transparent;
+    border-radius: 150px;
+    font-size: 29px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 4px 6px 6px white;
+    animation: text linear .8s;
+   
+}
+@keyframes text{
+    0%{
+        scale: 1;
+    }
+    50%{
+       scale: 1.2;
+    }
+    100%{
+        scale: 1;
+    }
+}
+.animation span{
+    animation: text2 linear .5s;
+
+}
+@keyframes text2{
+    0%{
+        transform: rotatey(0deg); 
+    }
+    50%{
+        transform: rotatey(180deg);
+        
+    }
+    100%{
+        transform: rotatey(360deg);
+    }
+}
+.animation .a{
+    animation: text3 linear .8s;
+}
+@keyframes text3{
+    0%{
+        transform: rotatex(0deg);
+    } 
+    100%{
+        transform: rotatex(360deg);
+    }
+}
