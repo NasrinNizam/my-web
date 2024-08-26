@@ -12,6 +12,7 @@ export default {
     extend: {},
     container:{
       center:true,
+      padding:'40px'
     }
   },
   plugins: [],

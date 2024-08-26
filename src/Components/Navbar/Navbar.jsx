@@ -15,15 +15,15 @@ export const Navbar = () => {
   
    <nav className="w-full bg-transparent ">
       <div className="container mx-auto flex justify-between items-center py-4 px-6" style={{ padding: '20px' }}>
-        <div className="text-2xl font-bold text-orange-500 ">
+        <div className="text-2xl font-bold text-[#FFB647]  ">
         <Logo/>
         </div>
         <div className="hidden md:flex gap-2 items-center">
         <NavLink to="/" className={({ isActive }) => isActive ? "text-orange-400 font-bold bg-white py-2 shadow-xl px-5 rounded-xl" : "text-black transition duration-300 hover:text-orange-500 hover:scale-110 bg-transparent py-2 px-5 rounded-xl " }>Home</NavLink>
         <NavLink to="/portfolio" className={({ isActive }) => isActive ? "text-orange-400 font-bold bg-white py-2 shadow-xl px-5 rounded-xl" : "text-black transition duration-300 hover:text-orange-500 hover:scale-110 bg-transparent py-2 px-5 rounded-xl " }>Portfolio</NavLink>
-        <NavLink to="/works" className={({ isActive }) => isActive ? "text-orange-400 font-bold bg-white py-2 shadow-xl px-5 rounded-xl" : "text-black transition duration-300 hover:text-orange-500 hover:scale-110 bg-transparent py-2 px-5 rounded-xl " }>Works</NavLink>
-        <NavLink to="/reviews" className={({ isActive }) => isActive ? "text-orange-400 font-bold bg-white py-2 shadow-xl px-5 rounded-xl" : "text-black transition duration-300 hover:text-orange-500 hover:scale-110 bg-transparent py-2 px-5 rounded-xl " }>Reviews</NavLink>
-        <NavLink to="/contacts" className={({ isActive }) => isActive ? "text-orange-400 font-bold bg-white py-2 shadow-xl px-5 rounded-xl" : "text-black transition duration-300 hover:text-orange-500 hover:scale-110 bg-transparent py-2 px-5 rounded-xl " }>Contacts</NavLink>
+        <NavLink to="/works" className={({ isActive }) => isActive ? "text-orange-400 font-bold bg-white py-2 shadow-xl px-5 rounded-xl" : "text-black transition duration-300 hover:text-orange-500 hover:scale-110 bg-transparent py-2 px-5 rounded-xl " }>Projects</NavLink>
+        <NavLink to="/reviews" className={({ isActive }) => isActive ? "text-orange-400 font-bold bg-white py-2 shadow-xl px-5 rounded-xl" : "text-black transition duration-300 hover:text-orange-500 hover:scale-110 bg-transparent py-2 px-5 rounded-xl " }>Testimonial</NavLink>
+        <NavLink to="/contacts" className={({ isActive }) => isActive ? "text-orange-400 font-bold bg-white py-2 shadow-xl px-5 rounded-xl" : "text-black transition duration-300 hover:text-orange-500 hover:scale-110 bg-transparent py-2 px-5 rounded-xl " }>Contact me</NavLink>
           
         </div>
           <div className="button">
@@ -53,9 +53,9 @@ export const Navbar = () => {
           <div className="flex flex-col items-center space-y-8 py-4 z-999 " style={{ padding: '30px', }}>
             <NavLink to="/" className="text-black text-lg transition duration-300 hover:text-white" activeClassName="text-white font-semibold" onClick={toggleMenu} >Home</NavLink>
             <NavLink to="/portfolio" className="text-black text-lg transition duration-300 hover:text-white" activeClassName="text-white font-semibold" onClick={toggleMenu}> Portfolio</NavLink>
-            <NavLink to="/works" className="text-black text-lg transition duration-300 hover:text-white" activeClassName="text-white font-semibold" onClick={toggleMenu}>Works</NavLink>
-            <NavLink to="/reviews" className="text-black text-lg transition duration-300 hover:text-white" activeClassName="text-white font-semibold" onClick={toggleMenu}>Review</NavLink>
-            <NavLink to="/contacts " className="text-black text-lg transition duration-300 hover:text-white" activeClassName="text-white font-semibold" onClick={toggleMenu}>Contact</NavLink>  
+            <NavLink to="/works" className="text-black text-lg transition duration-300 hover:text-white" activeClassName="text-white font-semibold" onClick={toggleMenu}>Projects</NavLink>
+            <NavLink to="/reviews" className="text-black text-lg transition duration-300 hover:text-white" activeClassName="text-white font-semibold" onClick={toggleMenu}>Testimonial</NavLink>
+            <NavLink to="/contacts " className="text-black text-lg transition duration-300 hover:text-white" activeClassName="text-white font-semibold" onClick={toggleMenu}>Contact Me</NavLink>  
           </div>
         </div>
       )}
