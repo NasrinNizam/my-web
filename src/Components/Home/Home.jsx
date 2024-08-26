@@ -15,7 +15,7 @@ export const Home = () => {
   return (
     <>
      <div className="pt-10 ">
-       <div className="container flex justify-around items-center">
+       <div className="container flex justify-around items-center flex-col md:flex-row">
         <div data-aos="fade-right"
              data-aos-offset="300"
              data-aos-duration="1000"
