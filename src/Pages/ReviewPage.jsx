@@ -1,7 +1,10 @@
 import React from 'react'
+import { Review } from '../assets/Review/Review'
 
 export const ReviewPage = () => {
   return (
-    <div>ReviewPage</div>
+    <div>
+      <Review />
+    </div>
   )
 }

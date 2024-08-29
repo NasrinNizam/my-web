@@ -7,6 +7,7 @@ import { ReviewPage } from './Pages/ReviewPage'
 import { ContactPage } from './Pages/ContactPage'
 import { LayoutOne } from './Layouts/LayoutOne'
 import { HomePage } from './Pages/HomePage'
+import { ToastContainer } from 'react-toastify'
 function App() {
   const route = createBrowserRouter(
     createRoutesFromElements(
@@ -26,6 +27,7 @@ function App() {
   return (
     <>
       <RouterProvider router={route}/>
+      <ToastContainer />
       
     </>
   )
