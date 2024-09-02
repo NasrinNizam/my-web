@@ -3,7 +3,6 @@ import '../portfolio/portfolio.css'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 import { SkillItem } from './SkillItem'
-// import { FaReact } from "react-icons/fa";
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaFigma,FaBootstrap } from 'react-icons/fa';
 import { SiTailwindcss } from 'react-icons/si';
 import { Card } from './Card'
@@ -29,8 +28,8 @@ export const Portfolio = () => {
                      <p className="lg:text-xl text-sm text-black animate-fadeInUp">React Developer</p>
                   </div>
                 </div>
-                <div data-aos="zoom-in-left" className="w-[500px] ">
-                  <h1 className="lg:text-[25px] text-center font-sans font-semibold ">Experienced React developer with over 3 years of expertise in building high-performance, scalable web applications. I specialize in delivering clean, maintainable code and seamless user experiences. Proficient in modern front-end technologies, including React, React-Redux, I focus on efficient, detail-oriented solutions that exceed client expectations.</h1>
+                <div data-aos="zoom-in-left" className="w-[500px] flex justify-center items-center ">
+                  <h1 className="lg:text-[25px] text-center font-sev font-semibold ">Experienced React developer with over 3 years of expertise in building high-performance, scalable web applications. I specialize in delivering clean, maintainable code and seamless user experiences. Proficient in modern front-end technologies, including React, React-Redux, I focus on efficient, detail-oriented solutions that exceed client expectations.</h1>
                 </div>
             </div>
             <div className=" mx-auto  overflow-hidden animate-fadeIn">

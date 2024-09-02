@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useEffect } from 'react';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaFacebook, FaWhatsapp, FaLinkedin, FaGithub } from 'react-icons/fa';
 import AOS from 'aos';
@@ -7,9 +7,40 @@ import { Section } from './Section';
 import { InfoCard } from '../InfoCard';
 import { Link } from 'react-router-dom';
 export const ConnectMe = () => {
+  // ========== aos animation variables
     useEffect(() => {
         AOS.init({ duration: 1000 });
       }, []);
+      // ======== form validation
+       // State to store form values
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+
+  // Handle input changes
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  // Handle form submission
+  const handleSubmit = (e) => {
+    e.preventDefault(); // Prevent default form submission behavior
+
+    // Your form submission logic here, e.g., sending the data to an API or server
+    console.log('Form Data Submitted:', formData);
+
+    // Reset form after submission
+    setFormData({
+      name: '',
+      email: '',
+      message: ''
+    });
+  };
   return (
     <div>
 <div className="min-h-screen flex flex-col items-center justify-center p-8">
@@ -61,30 +92,59 @@ export const ConnectMe = () => {
         </Section>
 
         <section>
-        <div data-aos="zoom-in" className="mb-16">
+      <div data-aos="zoom-in" className="mb-16">
         <h2 className="text-3xl font-semibold mb-8 text-center text-black">Send a Message</h2>
-        <form className="bg-white p-8 rounded-xl shadow-lg max-w-2xl mx-auto transition-shadow duration-300 hover:shadow-2xl">
+        <form onSubmit={handleSubmit} className="bg-white p-8 rounded-xl shadow-lg max-w-2xl mx-auto transition-shadow duration-300 hover:shadow-2xl">
           <div className="mb-6">
             <label className="block text-lg font-medium mb-3 text-black" htmlFor="name">Your Name</label>
-            <input className="w-full p-4 rounded-lg bg-gray-100 border border-gray-300 text-gray-800 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-all duration-300" type="text" id="name" name="name"/>
+            <input
+              className="w-full p-4 rounded-lg bg-gray-100 border border-gray-300 text-gray-800 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-all duration-300"
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your name"
+              value={formData.name}
+              onChange={handleChange}
+            />
           </div>
           <div className="mb-6">
             <label className="block text-lg font-medium mb-3 text-black" htmlFor="email">Your Email</label>
-            <input className="w-full p-4 rounded-lg bg-gray-100 border border-gray-300 text-gray-800 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-all duration-300" type="email" id="email" name="email" />
+            <input
+              className="w-full p-4 rounded-lg bg-gray-100 border border-gray-300 text-gray-800 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-all duration-300"
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              value={formData.email}
+              onChange={handleChange}
+            />
           </div>
           <div className="mb-6">
             <label className="block text-lg font-medium mb-3 text-black" htmlFor="message">Message</label>
-            <textarea className="w-full p-4 rounded-lg bg-gray-100 border border-gray-300 text-gray-800 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-all duration-300" id="message" name="message" rows="4"/>
+            <textarea
+              className="w-full p-4 rounded-lg bg-gray-100 border border-gray-300 text-gray-800 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-all duration-300"
+              id="message"
+              name="message"
+              rows="4"
+              placeholder="Write your message here..."
+              value={formData.message}
+              onChange={handleChange}
+            />
           </div>
-          <button type="submit" className="w-full py-4 rounded-lg bg-teal-600 hover:bg-teal-700 transition duration-300 text-white font-semibold text-lg shadow-lg hover:shadow-xl"> Send Message  </button>
+          <button
+            type="submit"
+            className="w-full py-4 rounded-lg bg-teal-600 hover:bg-teal-700 transition duration-300 text-white font-semibold text-lg shadow-lg hover:shadow-xl"
+          >
+            Send Message
+          </button>
         </form>
       </div>
-        </section>
+    </section>
 
         <Section title="Find Me Here">
           <div className="w-full h-64 bg-gray-200 rounded-lg overflow-hidden shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
             <iframe
-              src="https://www.google.com/maps/embed?..."
+             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58373.824592480145!2d90.33708780433246!3d23.876706605218637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c5d05e7074dd%3A0xd1c58803049f00c7!2sUttara%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1725281445720!5m2!1sen!2sbd"             
               width="100%"
               height="100%"
               frameBorder="0"

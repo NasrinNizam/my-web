@@ -6,7 +6,7 @@ export const Card = ({icon, title, description, bgColor, hoverColor  }) => {
     <div className="flex justify-center items-center mb-4">
         <div className="bg-white p-4 rounded-full">{icon}</div>
     </div>
-    <h2 className="text-xl font-semibold text-black mb-2 ">{title}</h2>
+    <h2 className="lg:text-xl font-semibold text-black mb-2 ">{title}</h2>
     <p className="text-gray-700">{description}</p>
   </div>
   )

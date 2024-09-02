@@ -8,6 +8,7 @@ import { ContactPage } from './Pages/ContactPage'
 import { LayoutOne } from './Layouts/LayoutOne'
 import { HomePage } from './Pages/HomePage'
 import { ToastContainer } from 'react-toastify'
+import { NotFoundPage } from './Pages/NotFoundPage'
 function App() {
   const route = createBrowserRouter(
     createRoutesFromElements(
@@ -20,6 +21,7 @@ function App() {
              <Route path='/reviews' element={<ReviewPage/>}/>
              <Route path='/contacts' element={<ContactPage/>}/>
           </Route>
+          <Route path='*' element={<NotFoundPage />}/>
         </Route>
     )
   )

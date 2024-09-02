@@ -1,15 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import FancyProjectCard from './FancyProjectCard'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import { OfferCard } from './OfferCard';
-import { FaHtml5, FaReact, FaCogs, FaTools } from 'react-icons/fa';
-import { StateCard } from './StateCard';
-import { FaRegSmile, FaProjectDiagram, FaAward } from 'react-icons/fa';
-import { SiFirebase } from "react-icons/si";
-
+import { FaCode, FaReact, FaDatabase, FaPaintBrush, FaTools } from 'react-icons/fa';
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 export const Project = () => {
+  // ====== slider variables =======//
     const settings = {
         dots: true,
         infinite: false,
@@ -45,6 +43,55 @@ export const Project = () => {
           }
         ]
       };
+      // ========== offer card variables ======
+      const services = [
+        {
+          title: 'Front-End Design',
+          description: 'Using HTML5, CSS3, and Vanilla JS to create responsive and visually appealing designs.',
+          icon: <FaPaintBrush />,
+          hoverColor: 'hover:bg-yellow-100',
+          borderColor: 'border-yellow-400',
+          textColor: 'text-yellow-500',
+        },
+        {
+          title: 'Front-End Development',
+          description: 'Building dynamic and interactive user interfaces with React and Tailwind CSS.',
+          icon: <FaReact />,
+          hoverColor: 'hover:bg-blue-100',
+          borderColor: 'border-blue-400',
+          textColor: 'text-blue-500',
+        },
+        {
+          title: 'Back-End Development',
+          description: 'Developing scalable and secure back-end systems using Firebase.',
+          icon: <FaDatabase />,
+          hoverColor: 'hover:bg-green-100',
+          borderColor: 'border-green-400',
+          textColor: 'text-green-500',
+        },
+        {
+          title: 'Customize Websites',
+          description: 'Tailoring websites to meet specific client needs and preferences.',
+          icon: <FaCode />,
+          hoverColor: 'hover:bg-purple-100',
+          borderColor: 'border-purple-400',
+          textColor: 'text-purple-500',
+        },
+        {
+          title: 'Website Maintenance',
+          description: 'Providing ongoing support and updates to keep websites running smoothly.',
+          icon: <FaTools />,
+          hoverColor: 'hover:bg-red-100',
+          borderColor: 'border-red-400',
+          textColor: 'text-red-500',
+        },
+      ];
+      // ======== aos animation variables ==========//
+      useEffect(() => {
+        Aos.init({ duration: 1000 });
+        Aos.refresh();
+      }, []);
+      
   return (
     <>
     <div className="container">
@@ -57,22 +104,22 @@ export const Project = () => {
                 {/* ======= slider part ====== */}
                 <div className="" >
                    <Slider {...settings}>
-                      <div>
+                      <div data-aos="zoom-in">
                         <FancyProjectCard image='images/news.png' title='NewsPro' description='An e-news Platform'/>
                       </div>
-                      <div>
+                      <div  data-aos="zoom-in">
                         <FancyProjectCard image='images/news.png' title='NewsPro' description='An e-news Platform'/>
                       </div>
-                      <div>
+                      <div  data-aos="zoom-in">
                         <FancyProjectCard image='images/news.png' title='NewsPro' description='An e-news Platform'/>
                       </div>
-                      <div>
+                      <div  data-aos="zoom-in">
                         <FancyProjectCard image='images/news.png' title='NewsPro' description='An e-news Platform'/>
                       </div>
-                      <div>
+                      <div  data-aos="zoom-in">
                         <FancyProjectCard image='images/news.png' title='NewsPro' description='An e-news Platform'/>
                       </div>
-                      <div>
+                      <div data-aos="zoom-in">
                         <FancyProjectCard image='images/news.png' title='NewsPro' description='An e-news Platform'/>
                       </div>
                     </Slider>
@@ -80,21 +127,26 @@ export const Project = () => {
             </div>
             {/* ======== what I offer part ======= */}
             <div className="mb-[60px] ">
-                <div className="flex items-center gap-4 mb-5 ">
-                    <h2 className="text-[25px] text-black font-semibold  ">What I Offer</h2>
-                    <div className="w-[120px] h-[1px] bg-black "></div>
+                <div className="flex items-center gap-[10px] mb-7 ">
+                   <h3 className="text-[25px] text-black font-semibold  ">What I Offer </h3>
+                   <div className="w-[120px] h-[1px] bg-black  "></div>
                 </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
-                <OfferCard title="Front-End Design" description="HTML5, CSS, and Vanilla JS" icon={<FaHtml5 />}/>
-                <OfferCard title="Front-End Development" description="React and Tailwind CSS"  icon={<FaReact />}/>
-                <OfferCard title="Back-End Development" description="Firebase"  icon={<SiFirebase  />}/>
-                <OfferCard title="Customizing Websites" description="Tailored solutions to fit your needs" icon={<FaCogs />}/>
-                <OfferCard title="Website Maintenance" description="Keep your site running smoothly" icon={<FaTools />} />
-                <OfferCard title="Website Maintenance" description="Keep your site running smoothly" icon={<FaTools />} />
+             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
+             {services.map((service, index) => (
+              <div  data-aos="zoom-in-up" key={index} className={`bg-white border-l-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out p-6 ${service.hoverColor} ${service.borderColor}`}>
+                <div className="flex items-center mb-4">
+                  <span className={`text-3xl ${service.textColor}`}>
+                    {service.icon}
+                  </span>
+                  <h3 className="ml-3 text-xl font-semibold text-gray-800">{service.title}</h3>
+                </div>
+                <p className="text-gray-600">{service.description}</p>
               </div>
-            </div>
+            ))}
+          </div>
+         </div>
             {/* ======= my profile part ======== */}
-            
+               
         </div>
      </div>
     </>

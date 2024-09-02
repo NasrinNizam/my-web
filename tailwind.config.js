@@ -9,7 +9,11 @@ export default {
       'photo':"url('/image/bgone.png')",
 
     },
-    extend: {},
+    extend: {
+      fontFamily :{
+        'sev' : ["Sevillana", 'system-ui']
+      }
+    },
     container:{
       center:true,
       padding:'40px'
