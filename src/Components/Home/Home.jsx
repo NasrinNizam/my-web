@@ -40,7 +40,7 @@ export const Home = () => {
             <SocialButton hoverBg='hover:bg-black' color="text-black" icons= { <FaGithub size={20} />} social="https://github.com/NasrinNizam"/>
           </div>
         </div>
-        <div className="lg:h-[400px] md:h-[300px] relative ">
+        <div className="lg:h-[400px] md:h-[300px] w-auto relative ">
           <img  data-aos="fade-left"
           data-aos-anchor="#example-anchor"
           data-aos-offset="300"

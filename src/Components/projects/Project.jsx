@@ -9,15 +9,20 @@ import Aos from 'aos'
 import 'aos/dist/aos.css'
 import { Link } from 'react-router-dom';
 import ProjectCard from './ProjectCard';
+
 export const Project = () => {
   // ====== slider variables =======//
     const settings = {
         dots: true,
-        infinite: false,
+        infinite: true,
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 1,
         initialSlide: 0,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        pauseOnHover: true,
+       
         
         responsive: [
           {
@@ -130,9 +135,6 @@ export const Project = () => {
                       <div  data-aos="zoom-in">
                         <FancyProjectCard image='images/news.png' title='NewsPro' description='An e-news Platform'/>
                       </div>
-                      <div data-aos="zoom-in">
-                        <FancyProjectCard image='images/news.png' title='NewsPro' description='An e-news Platform'/>
-                      </div>
                     </Slider>
                 </div>
             </div>
@@ -167,7 +169,7 @@ export const Project = () => {
                   <ProjectCard lnk='https://nasrinnizam.github.io/TOBOLO/' img={<img className="w-full h-48 object-cover" src="images/tobolo.png" alt="Project"/>} title='TOBOLO , the guessing game' brief={'This is a number guessing game. '} />
                   <ProjectCard lnk='https://nasrinnizam.github.io/to-do-new/' img={<img className="w-full h-48 object-cover" src="images/todo.png" alt="Project"/>} title='To-Do List' brief={'This is a to-do list application. '} />
                   <ProjectCard lnk='https://nasrinnizam.github.io/number-multiplication-table/' img={<img className="w-full h-48 object-cover" src="images/number.png" alt="Project"/>} title='Number Multiplication Table' brief={'This is a number multiplication table. Fun to use and also helpful '} />
-                  <ProjectCard lnk='https://nasrinnizam.github.io/Number_counter/' img={<img className="w-full h-48 object-cover" src="images/counter.png" alt="Project"/>} title='Number Counter' brief={"This is a Number counter. It's starts from zero to infinity. "} />
+                  <ProjectCard lnk='https://nasrinnizam.github.io/Number_counter/' img={<img className="w-full h-48 object-cover" src="images/counter.png" alt="Project"/>} title='Number Counter' brief={"This is a Number counter. It can count from zero to infinity. "} />
                 </div>
             </div>               
         </div>
