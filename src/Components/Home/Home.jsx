@@ -7,6 +7,7 @@ import { FaLinkedinIn } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 import '../Home/home.css'
 import { MegaButton } from './MegaButton';
+import CustomCursor from './CustomCursor';
 export const Home = () => {
   useEffect(() => {
     Aos.init();
@@ -14,6 +15,7 @@ export const Home = () => {
   }, []);
   return (
     <>
+    <CustomCursor />
      <div className="pt-10 ">
        <div className="container flex justify-around items-center flex-col md:flex-row">
         <div data-aos="fade-right"
@@ -27,7 +29,7 @@ export const Home = () => {
           </div>
           <h1 className="text-[50px] font-bold z-[200] "> Nasrin Sultana</h1>
           <h2 className="text-[25px] font-semibold mb-3 ">React Developer</h2>
-          <a href="/images/my-resume.pdf" download='nasrin.pdf' className=" mb-5 relative inline-flex items-center justify-center px-8 py-3 font-semibold text-white bg-orange-500 rounded-full overflow-hidden transition duration-500 ease-in-out group hover:bg-orange-600 focus:outline-none focus:ring-4 focus:ring-orange-300">
+          <a href="/images/my-resume.pdf" download='nasrin.pdf' className=" mb-5 relative inline-flex items-center justify-center px-8 py-3 font-semibold text-white bg-[#EA580C] rounded-full overflow-hidden transition duration-500 ease-in-out group hover:bg-orange-600 focus:outline-none focus:ring-4 focus:ring-orange-300">
             <span className="absolute inset-0 w-0 bg-white opacity-30 transition-all duration-500 ease-in-out group-hover:w-full"></span>
             <span className="relative z-10">Download CV</span>
             <span className="absolute right-0 w-8 h-8 transform rotate-45 translate-x-full translate-y-full bg-white opacity-50 transition-transform duration-500 ease-in-out group-hover:translate-x-0 group-hover:translate-y-0"></span>

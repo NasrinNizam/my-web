@@ -1,0 +1,38 @@
+.custom-cursor {
+    position: fixed;
+    width: 16px;
+    height: 16px;
+    background: linear-gradient(45deg, #ff6ec4, #7873f5); /* Colorful gradient */
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: transform 0.2s ease-out, background-color 0.4s ease;
+    z-index: 10000;
+    opacity: 0.9;
+    box-shadow: 0 0 8px rgba(255, 110, 196, 0.6), 0 0 12px rgba(120, 115, 245, 0.5); /* Vibrant glow */
+    animation: color-change 4s infinite alternate; /* Color animation */
+  }
+  
+  /* Hover effect for interactive elements */
+  .custom-cursor.hovered {
+    transform: translate(-50%, -50%) scale(1.5); /* Enlarges smoothly on hover */
+    box-shadow: 0 0 15px rgba(255, 110, 196, 0.8), 0 0 20px rgba(120, 115, 245, 0.7); /* Stronger glow */
+    opacity: 1;
+  }
+  
+  /* Color-changing animation for a dynamic effect */
+  @keyframes color-change {
+    0% {
+      background: linear-gradient(45deg, #ff6ec4, #e6553f);
+    }
+    50% {
+      background: linear-gradient(45deg, #d22e44, #e73a7f);
+    }
+    100% {
+      background: linear-gradient(45deg, #ff6ec4, #f4f4f4);
+    }
+  }
+  
+  /* Hide the default cursor */
+  
+  

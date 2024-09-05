@@ -6,6 +6,7 @@ import Slider from "react-slick";
 import { FaCode, FaReact, FaDatabase, FaPaintBrush, FaTools } from 'react-icons/fa';
 import Aos from 'aos'
 import 'aos/dist/aos.css'
+import { Link } from 'react-router-dom';
 export const Project = () => {
   // ====== slider variables =======//
     const settings = {
@@ -105,13 +106,13 @@ export const Project = () => {
                 <div className="" >
                    <Slider {...settings}>
                       <div data-aos="zoom-in">
-                        <FancyProjectCard image='images/news.png' title='NewsPro' description='An e-news Platform'/>
+                        <FancyProjectCard link="https://news-pro-rho.vercel.app/" image='images/news.png' title='NewsPro' description='An e-news Platform'/>
                       </div>
                       <div  data-aos="zoom-in">
-                        <FancyProjectCard image='images/news.png' title='NewsPro' description='An e-news Platform'/>
+                        <FancyProjectCard link="https://chatting-u9sf6ig4a-nasrinnizams-projects.vercel.app" image='images/chat.png' title='Chatify' description='A chatting Website'/>
                       </div>
                       <div  data-aos="zoom-in">
-                        <FancyProjectCard image='images/news.png' title='NewsPro' description='An e-news Platform'/>
+                        <FancyProjectCard link="https://web-hosting-eosin.vercel.app/" image='images/web.png' title='Hosting Website' description='Premium Web Hosting for Your Website'/>
                       </div>
                       <div  data-aos="zoom-in">
                         <FancyProjectCard image='images/news.png' title='NewsPro' description='An e-news Platform'/>
