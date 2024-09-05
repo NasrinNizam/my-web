@@ -19,8 +19,8 @@ export const Portfolio = () => {
      <section className="pt-[60px] ">
         <div className="container">
             <div className="flex justify-between lg:justify-around mb-[80px]">
-                <div className="">
-                  <div data-aos="fade-down-right" className="lg:w-[250px] lg:h-[250px] ">
+                <div className="hidden md:block">
+                  <div data-aos="fade-down-right" className="lg:w-[250px] lg:h-[250px] md:w-[150px] md:h-[150px] ">
                     <img className="w-full h-full rounded-full " src="images/98.jpg" alt="nasrin" />
                   </div>
                   <div data-aos="zoom-in" className="text-center mt-5">

@@ -19,15 +19,15 @@ export const Navbar = () => {
         <Logo/>
         </div>
         <div className="hidden md:flex gap-2 items-center">
-        <NavLink to="/" className={({ isActive }) => isActive ? "text-[#EA580C] font-bold bg-white py-2 shadow-xl px-5 rounded-xl" : "text-black transition duration-300 hover:text-orange-500 hover:scale-110 bg-transparent py-2 px-5 rounded-xl " }>Home</NavLink>
-        <NavLink to="/portfolio" className={({ isActive }) => isActive ? "text-[#EA580C] font-bold bg-white py-2 shadow-xl px-5 rounded-xl" : "text-black transition duration-300 hover:text-orange-500 hover:scale-110 bg-transparent py-2 px-5 rounded-xl " }>Portfolio</NavLink>
-        <NavLink to="/works" className={({ isActive }) => isActive ? "text-[#EA580C] font-bold bg-white py-2 shadow-xl px-5 rounded-xl" : "text-black transition duration-300 hover:text-orange-500 hover:scale-110 bg-transparent py-2 px-5 rounded-xl " }>Projects</NavLink>
-        <NavLink to="/reviews" className={({ isActive }) => isActive ? "text-[#EA580C] font-bold bg-white py-2 shadow-xl px-5 rounded-xl" : "text-black transition duration-300 hover:text-orange-500 hover:scale-110 bg-transparent py-2 px-5 rounded-xl " }>Testimonial</NavLink>
-        <NavLink to="/contacts" className={({ isActive }) => isActive ? "text-[#EA580C] font-bold bg-white py-2 shadow-xl px-5 rounded-xl" : "text-black transition duration-300 hover:text-orange-500 hover:scale-110 bg-transparent py-2 px-5 rounded-xl " }>Contact me</NavLink>
+        <NavLink to="/" className={({ isActive }) => isActive ? "text-[#EA580C] font-bold bg-white py-2 shadow-xl lg:px-5 px-3 rounded-xl" : "text-black transition duration-300 hover:text-orange-500 hover:scale-110 bg-transparent py-2 lg:px-5 px-3 hover:bg-slate-200 rounded-xl " }>Home</NavLink>
+        <NavLink to="/portfolio" className={({ isActive }) => isActive ? "text-[#EA580C] font-bold bg-white py-2 shadow-xl lg:px-5 px-3 rounded-xl" : "text-black transition duration-300 hover:text-orange-500 hover:scale-110 bg-transparent py-2 lg:px-5 px-3 hover:bg-slate-200 rounded-xl " }>Portfolio</NavLink>
+        <NavLink to="/works" className={({ isActive }) => isActive ? "text-[#EA580C] font-bold bg-white py-2 shadow-xl lg:px-5 px-3 rounded-xl" : "text-black transition duration-300 hover:text-orange-500 hover:scale-110 bg-transparent py-2 lg:px-5 px-3 hover:bg-slate-200 rounded-xl " }>Projects</NavLink>
+        {/* <NavLink to="/reviews" className={({ isActive }) => isActive ? "text-[#EA580C] font-bold bg-white py-2 shadow-xl lg:px-5 px-3 rounded-xl" : "text-black transition duration-300 hover:text-orange-500 hover:scale-110 bg-transparent py-2 lg:px-5 px-3 hover:bg-slate-200 rounded-xl " }>Testimonial</NavLink> */}
+        <NavLink to="/contacts" className={({ isActive }) => isActive ? "text-[#EA580C] font-bold bg-white py-2 shadow-xl lg:px-5 px-3 rounded-xl" : "text-black transition duration-300 hover:text-orange-500 hover:scale-110 bg-transparent py-2 lg:px-5 px-3 hover:bg-slate-200 rounded-xl " }>Contact me</NavLink>
           
         </div>
           <div className="button">
-          <button onClick={handleNavigate}  class="relative px-8 py-3 font-semibold text-white hover:text-orange-500 shadow-2xl bg-[#EA580C] overflow-hidden group active:scale-95">
+          <button onClick={handleNavigate}  class="relative lg:px-8 px-3 py-2 lg:py-3 font-semibold text-white hover:text-orange-500 shadow-2xl bg-[#EA580C] overflow-hidden group active:scale-95">
             <span class="absolute inset-0 w-full h-full bg-white transition-all duration-300 ease-out transform -translate-x-full group-hover:translate-x-0"></span>
             <span class="absolute inset-0 w-full h-full border-2 border-orange-500 transition-all duration-300 ease-out transform scale-110 group-hover:scale-100"></span>
            <span class="relative z-10 transition-transform duration-300 group-hover:scale-110">Hire Me</span>

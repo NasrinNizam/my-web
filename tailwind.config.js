@@ -16,7 +16,7 @@ export default {
     },
     container:{
       center:true,
-      padding:'40px'
+      padding:'20px'
     }
   },
   plugins: [],

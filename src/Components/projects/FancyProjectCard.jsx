@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const FancyProjectCard = ({ title, description, image, link }) => {
   return (
         <div className="container">
-          <div className="relative lg:w-[340px] lg:h-[300px] w-[170px] h-[150px] rounded-lg overflow-hidden shadow-2xl transform transition duration-500 hover:shadow-xl hover:border-[1px] hover:border-gray-400 border-[1px] border-transparent ">
+          <div className="relative mx-auto lg:w-[340px] lg:h-[300px] w-[170px] h-[150px] rounded-lg overflow-hidden shadow-2xl transform transition duration-500 hover:shadow-xl hover:border-[1px] hover:border-gray-400 border-[1px] border-transparent ">
               <div className="overflow-hidden">
                 <img className="w-full lg:h-[150px] object-cover transition-transform duration-500 transform " src={image} alt={title}/>
               <div className="p-3  text-black ">
@@ -15,7 +15,7 @@ const FancyProjectCard = ({ title, description, image, link }) => {
                   <div className="absolute right-2 -top-4  group-hover:top-1 group-hover:right-2 z-10 w-32 h-32 rounded-full group-hover:scale-150  duration-500 bg-sky-800"></div>
                   <div className="absolute -right-12 top-4 group-hover:top-1 group-hover:right-2 z-10 w-24 h-24 rounded-full group-hover:scale-150  duration-500 bg-sky-700"></div>
                   <div className="absolute right-20 -top-4 group-hover:top-1 group-hover:right-2 z-10 w-16 h-16 rounded-full group-hover:scale-150  duration-500 bg-sky-600"></div>
-                  <Link to={link} className="z-10 text-[10px] lg:text-[16px] "> Live Preview</Link>
+                  <Link to={link}  target='_blank' className="z-10 text-[10px] lg:text-[16px] "> Live Preview</Link>
                </button>
               </div>
             </div>

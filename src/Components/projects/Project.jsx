@@ -4,9 +4,11 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { FaCode, FaReact, FaDatabase, FaPaintBrush, FaTools } from 'react-icons/fa';
+import { TbWindowMinimize } from "react-icons/tb";
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 import { Link } from 'react-router-dom';
+import ProjectCard from './ProjectCard';
 export const Project = () => {
   // ====== slider variables =======//
     const settings = {
@@ -86,6 +88,14 @@ export const Project = () => {
           borderColor: 'border-red-400',
           textColor: 'text-red-500',
         },
+        {
+          title: 'Responsive Design',
+          description: 'Responsive design ensures a seamless user experience on all devices.',
+          icon:<TbWindowMinimize />,
+          hoverColor: 'hover:bg-teal-100',
+          borderColor: 'border-teal-400',
+          textColor: 'text-teal-500',
+        },
       ];
       // ======== aos animation variables ==========//
       useEffect(() => {
@@ -99,8 +109,8 @@ export const Project = () => {
         <div className="div">
             <div className="mt-[60px] mb-[60px] ">
                 <div className="flex items-center gap-[10px] mb-7 ">
-                   <h3 className="text-[25px] text-black font-semibold  "> My Projects </h3>
-                   <div className="w-[120px] h-[1px] bg-black  "></div>
+                   <h3 className="text-[25px] text-black font-semibold  ">New Projects </h3>
+                   <div className="md:w-[120px] w-[50px] h-[1px] bg-black  "></div>
                 </div>
                 {/* ======= slider part ====== */}
                 <div className="" >
@@ -130,9 +140,9 @@ export const Project = () => {
             <div className="mb-[60px] ">
                 <div className="flex items-center gap-[10px] mb-7 ">
                    <h3 className="text-[25px] text-black font-semibold  ">What I Offer </h3>
-                   <div className="w-[120px] h-[1px] bg-black  "></div>
+                   <div className="md:w-[120px] w-[50px] h-[1px] bg-black  "></div>
                 </div>
-             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
+             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6 ">
              {services.map((service, index) => (
               <div  data-aos="zoom-in-up" key={index} className={`bg-white border-l-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out p-6 ${service.hoverColor} ${service.borderColor}`}>
                 <div className="flex items-center mb-4">
@@ -146,8 +156,20 @@ export const Project = () => {
             ))}
           </div>
          </div>
-            {/* ======= my profile part ======== */}
-               
+            {/* ======= my projects part ======== */}
+            <div className="div">
+            <div className="flex items-center gap-[10px] mb-7 ">
+                   <h3 className="text-[25px] text-black font-semibold  ">Projects </h3>
+                   <div className="md:w-[120px] w-[50px] h-[1px] bg-black  "></div>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
+                  <ProjectCard lnk='https://nasrinnizam.github.io/Wallet-money-transaction/' img={<img className="w-full h-48 object-cover" src="images/bank.png" alt="Project"/>} title='Wallet' brief={'This is a simple money transaction application. '} />
+                  <ProjectCard lnk='https://nasrinnizam.github.io/TOBOLO/' img={<img className="w-full h-48 object-cover" src="images/tobolo.png" alt="Project"/>} title='TOBOLO , the guessing game' brief={'This is a number guessing game. '} />
+                  <ProjectCard lnk='https://nasrinnizam.github.io/to-do-new/' img={<img className="w-full h-48 object-cover" src="images/todo.png" alt="Project"/>} title='To-Do List' brief={'This is a to-do list application. '} />
+                  <ProjectCard lnk='https://nasrinnizam.github.io/number-multiplication-table/' img={<img className="w-full h-48 object-cover" src="images/number.png" alt="Project"/>} title='Number Multiplication Table' brief={'This is a number multiplication table. Fun to use and also helpful '} />
+                  <ProjectCard lnk='https://nasrinnizam.github.io/Number_counter/' img={<img className="w-full h-48 object-cover" src="images/counter.png" alt="Project"/>} title='Number Counter' brief={"This is a Number counter. It's starts from zero to infinity. "} />
+                </div>
+            </div>               
         </div>
      </div>
     </>
