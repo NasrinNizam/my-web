@@ -74,18 +74,18 @@ export const ConnectMe = () => {
         <Section title="Find Me Online">
         <div className="flex justify-center gap-6">
           <Link data-aos="zoom-out" to="https://www.facebook.com/profile.php?id=61557964826146" className="group">
-            <div className="p-6 border-[1px] border-teal-600 rounded-full bg-white shadow-lg hover:shadow-2xl transition-transform duration-300 transform group-hover:scale-110">
-              <FaFacebook className="text-5xl text-teal-600 group-hover:text-teal-700 transition-colors duration-300" />
+            <div className="p-4 md:p-6 border-[1px] border-teal-600 rounded-full bg-white shadow-lg hover:shadow-2xl transition-transform duration-300 transform group-hover:scale-110">
+              <FaFacebook className="md:text-5xl text-3xl text-teal-600 group-hover:text-teal-700 transition-colors duration-300" />
             </div>
           </Link>
           <Link data-aos="zoom-out" to="https://github.com/NasrinNizam" className="group">
-            <div className="p-6 border-[1px] border-teal-600 rounded-full bg-white shadow-lg hover:shadow-2xl transition-transform duration-300 transform group-hover:scale-110">
-              <FaGithub className="text-5xl text-teal-600 group-hover:text-teal-700 transition-colors duration-300" />
+            <div className="p-4 md:p-6 border-[1px] border-teal-600 rounded-full bg-white shadow-lg hover:shadow-2xl transition-transform duration-300 transform group-hover:scale-110">
+              <FaGithub className="md:text-5xl text-3xl text-teal-600 group-hover:text-teal-700 transition-colors duration-300" />
             </div>
           </Link>
           <Link data-aos="zoom-out" to="https://www.linkedin.com/in/nasrin-sultana-5a59b9301?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="group">
-            <div className="p-6 border-[1px] border-teal-600 rounded-full bg-white shadow-lg hover:shadow-2xl transition-transform duration-300 transform group-hover:scale-110">
-              <FaLinkedin className="text-5xl text-teal-600 group-hover:text-teal-700 transition-colors duration-300" />
+            <div className="p-4 md:p-6 border-[1px] border-teal-600 rounded-full bg-white shadow-lg hover:shadow-2xl transition-transform duration-300 transform group-hover:scale-110">
+              <FaLinkedin className="md:text-5xl text-3xl text-teal-600 group-hover:text-teal-700 transition-colors duration-300" />
             </div>
           </Link>
         </div>

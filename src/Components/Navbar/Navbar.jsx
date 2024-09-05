@@ -54,7 +54,7 @@ export const Navbar = () => {
             <NavLink to="/" className="text-black text-lg transition duration-300 hover:text-white" activeClassName="text-white font-semibold" onClick={toggleMenu} >Home</NavLink>
             <NavLink to="/portfolio" className="text-black text-lg transition duration-300 hover:text-white" activeClassName="text-white font-semibold" onClick={toggleMenu}> Portfolio</NavLink>
             <NavLink to="/works" className="text-black text-lg transition duration-300 hover:text-white" activeClassName="text-white font-semibold" onClick={toggleMenu}>Projects</NavLink>
-            <NavLink to="/reviews" className="text-black text-lg transition duration-300 hover:text-white" activeClassName="text-white font-semibold" onClick={toggleMenu}>Testimonial</NavLink>
+            {/* <NavLink to="/reviews" className="text-black text-lg transition duration-300 hover:text-white" activeClassName="text-white font-semibold" onClick={toggleMenu}>Testimonial</NavLink> */}
             <NavLink to="/contacts" className="text-black text-lg transition duration-300 hover:text-white" activeClassName="text-white font-semibold" onClick={toggleMenu}>Contact Me</NavLink>  
           </div>
         </div>
