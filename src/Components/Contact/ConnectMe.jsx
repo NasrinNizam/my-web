@@ -46,7 +46,7 @@ export const ConnectMe = () => {
 <div className="min-h-screen flex flex-col items-center justify-center p-8">
       <div className="w-full max-w-5xl space-y-8">
         <Section title="Get in Touch">
-          <div className="flex flex-col md:flex-row justify-between space-y-6 md:space-y-0 md:space-x-6">
+          <div className="flex flex-col gap-2 md:flex-row justify-between space-y-6 md:space-y-0 md:space-x-6">
             <div  data-aos="fade-right" className="">
             <InfoCard
               icon={<FaEnvelope size={30} className="text-blue-500" />}
