@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const FancyProjectCard = ({ title, description, image, link }) => {
   return (
         <div className="container">
-          <div className="relative mx-auto lg:w-[340px] lg:h-[300px] w-[190px] h-[170px] rounded-lg overflow-hidden shadow-2xl transform transition duration-500 hover:shadow-xl hover:border-[1px] hover:border-gray-400 border-[1px] border-transparent ">
+          <div className="relative mx-auto lg:w-[340px] lg:h-[300px] md:w-[220px] md:h-[200px] w-[200px] h-[170px] rounded-lg overflow-hidden shadow-2xl transform transition duration-500 hover:shadow-xl hover:border-[1px] hover:border-gray-400 border-[1px] border-transparent ">
               <div className="overflow-hidden">
                 <img className="w-full lg:h-[150px] object-cover transition-transform duration-500 transform " src={image} alt={title}/>
               <div className="p-3  text-black ">
