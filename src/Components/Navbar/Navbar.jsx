@@ -44,8 +44,8 @@ export const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden z-[999] bg-orange-400 rounded-lg h-screen absolute right-1 top-0 flex flex-col justify-evenly items-center ">
-          <button onClick={toggleMenu} className="text-white focus:outline-none">
+        <div className="md:hidden z-[999] bg-gray-300 rounded-lg h-screen absolute right-1 top-0 flex flex-col justify-evenly items-center ">
+          <button onClick={toggleMenu} className="text-black focus:outline-none">
             <svg className="w-8 h-8 " fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
             </svg>
