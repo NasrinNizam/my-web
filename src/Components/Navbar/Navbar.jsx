@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link, NavLink, useNavigate } from 'react-router-dom'
 import { Logo } from './Logo';
 export const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
   const navigate = useNavigate()
 
   const toggleMenu = () => {
